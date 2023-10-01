@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:premier_league_trivia/data/questions.dart';
 import 'package:premier_league_trivia/screens/questions_screen.dart';
 import 'package:premier_league_trivia/screens/results_screen.dart';
@@ -31,6 +32,13 @@ class _QuizState extends State<Quiz> {
     }
   }
 
+  void restartQuiz() {
+    setState(() {
+      selectedAnswers = [];
+      activeScreen = 'questions-screen';
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget screenWidget = StartScreen(switchScreen);
@@ -44,6 +52,7 @@ class _QuizState extends State<Quiz> {
     if (activeScreen == 'result-screen') {
       screenWidget = ResultsScreen(
         chosenAnswers: selectedAnswers,
+        onRestart: restartQuiz,
       );
     }
 
@@ -52,6 +61,10 @@ class _QuizState extends State<Quiz> {
       home: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/pl_logo.png'),
+              opacity: 0.2,
+            ),
             gradient: LinearGradient(
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,

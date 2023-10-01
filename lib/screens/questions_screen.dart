@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:premier_league_trivia/widgets/answer_button.dart';
 import 'package:premier_league_trivia/data/questions.dart';
-import '../models/quiz_question.dart';
 
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({
@@ -18,33 +17,17 @@ class QuestionsScreen extends StatefulWidget {
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
   int currentQuestionIndex = 0;
-  late List<QuizQuestion> shuffledQuestions;
-
-  @override
-  void initState() {
-    super.initState();
-    shuffledQuestions = [...questions];
-    shuffledQuestions.shuffle();
-  }
 
   void answerQuestion(String selectedAnswer) {
     widget.onSelectAnswer(selectedAnswer);
     setState(() {
-      if (currentQuestionIndex < shuffledQuestions.length - 1) {
-        currentQuestionIndex++;
-      } else {
-        // Handle end of questions or quiz completion
-        // You can navigate to a result screen or restart the quiz here.
-        // For simplicity, we'll just loop back to the first question.
-        currentQuestionIndex = 0;
-        shuffledQuestions.shuffle();
-      }
+      currentQuestionIndex++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    final currentQuestion = shuffledQuestions[currentQuestionIndex];
+    final currentQuestion = questions[currentQuestionIndex];
 
     return SizedBox(
       width: double.infinity,

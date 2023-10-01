@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 
 import 'package:premier_league_trivia/data/questions.dart';
-import 'package:premier_league_trivia/widgets/questions_summary.dart';
+import 'package:premier_league_trivia/questions_summary/questions_summary.dart';
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.chosenAnswers,
+    required this.onRestart,
   });
 
+  final void Function() onRestart;
   final List<String> chosenAnswers;
 
   List<Map<String, Object>> getSummaryData() {
@@ -43,14 +45,28 @@ class ResultsScreen extends StatelessWidget {
           children: [
             Text(
               'You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!',
+              style: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w500,
+                color: Color.fromARGB(255, 55, 45, 96),
+              ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
             QuestionsSummary(getSummaryData()),
             const SizedBox(height: 30),
             TextButton.icon(
-              onPressed: () {},
-              icon: const Icon(Icons.refresh),
-              label: const Text('Restart Quiz'),
+              onPressed: onRestart,
+              icon: const Icon(
+                Icons.refresh,
+                color: Color.fromARGB(255, 55, 45, 96),
+              ),
+              label: const Text(
+                'Restart Quiz',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 55, 45, 96),
+                ),
+              ),
             ),
           ],
         ),
