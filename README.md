@@ -44,8 +44,8 @@ To run this Flutter quiz app on your local machine, make sure you have Flutter i
 3. View your score and the correct answers.
 
 ## Screenshots
-<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/63235d35-1be9-4fc9-a64f-e8829b50394b" width="250"/><br />
-<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/afe1e058-0388-4e1c-9070-5cce8b755164" width="250"/><br />
+<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/63235d35-1be9-4fc9-a64f-e8829b50394b" width="250"/>   
+<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/afe1e058-0388-4e1c-9070-5cce8b755164" width="250"/>   
 <img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/38cb80cb-e430-4eb1-94f9-6a57e700bb46" width="250"/><br />
 
 ## App Demo
