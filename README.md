@@ -45,11 +45,11 @@ To run this Flutter quiz app on your local machine, make sure you have Flutter i
 
 ## Screenshots
 <img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/63235d35-1be9-4fc9-a64f-e8829b50394b" width="250"/>   
-<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/afe1e058-0388-4e1c-9070-5cce8b755164" width="250"/>   
-<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/38cb80cb-e430-4eb1-94f9-6a57e700bb46" width="250"/><br />
+<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/9000ac79-6d1a-49f3-9a6f-33b6be40be99" width="250"/>   
+<img src="https://github.com/michelgm/premier_league_trivia/assets/99933941/11f27b4f-3ece-4729-825a-2a03941a07bc" width="250"/><br />
 
 ## App Demo
-https://github.com/michelgm/premier_league_trivia/assets/99933941/d0fabf64-30f1-48cc-aa21-7f4657b7b602
+https://github.com/michelgm/premier_league_trivia/assets/99933941/17706b2d-4477-4513-84de-3fa0d12a6b7b
 
 
 
